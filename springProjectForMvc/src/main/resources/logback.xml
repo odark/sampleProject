@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level [%thread][%logger{0}] %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- Application Loggers -->
+	<logger name="com.odark" level="DEBUG" />
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.springframework.web.bind.annotation.support.HandlerMethodInvoker" level="INFO" />
+	<logger name="org.springframework.web.servlet.DispathcherServlet" level="INFO" />
+
+	<root level="INFO">
+		<appender-ref ref="CONSOLE" />
+	</root>
+</configuration>
